@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://personal-finance-tracker-api-a97c.onrender.com/api";
 
 const getToken = () => localStorage.getItem("token");
 
