@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2>Finance Tracker</h2>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="container fade-in">
+
+  <!-- SUMMARY CARDS -->
+  <div class="cards">
+    <div class="card income-card">
+      <h4>Income</h4>
+      <p id="income"></p>
+    </div>
+
+    <div class="card expense-card">
+      <h4>Expenses</h4>
+      <p id="expenses"></p>
+    </div>
+
+    <div class="card balance-card">
+      <h4>Balance</h4>
+      <p id="balance"></p>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-container">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <!-- ADD TRANSACTION -->
+  <div class="form-card">
+    <h3>Add Transaction</h3>
+
+    <input id="amount" placeholder="Amount">
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <input id="category" placeholder="Category">
+    <input id="description" placeholder="Description">
+
+    <button onclick="addTransaction()">Add Transaction</button>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-card">
+    <h3>Transactions</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody id="table"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+<script src="chart.js"></script>
+
+</body>
+</html>
